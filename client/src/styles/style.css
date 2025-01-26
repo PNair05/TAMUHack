@@ -197,6 +197,22 @@ header h1 {
     box-shadow: var(--neon-glow);
   }
 }
+ .custom-prompt{
+  background: rgba(117, 3, 3, 0.9);
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  padding: 25px;
+  /* box-shadow: var(--neon-glow); */
+  transition: all 0.3s ease;
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+ }
+
 
 .quiz-container,
 .car-item {

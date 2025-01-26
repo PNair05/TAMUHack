@@ -97,6 +97,7 @@ const ToyotAIApp: React.FC = () => {
           <p>Choose a method to find your ideal car:</p>
           <button onClick={toggleQuizForm}>Take the Quiz</button>
           <br></br>
+          <br></br>
           <div className="custom-prompt">
             <input
               type="text"
@@ -106,7 +107,6 @@ const ToyotAIApp: React.FC = () => {
             />
             <button onClick={submitPrompt}>Submit</button>
           </div>
-          <button onClick={submitPrompt}>Enter a Custom Prompt</button>
           <form id="quiz-form">
             <label htmlFor="model">Model</label>
             <input type="text" id="model" placeholder="e.g., Camry, Corolla" />
