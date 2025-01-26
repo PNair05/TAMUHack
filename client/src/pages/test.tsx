@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Star, StarHalf } from 'lucide-react';
 import reviewData from './pi.json';
+import './test.css';
 
-// Define interfaces for type safety
 interface Review {
     ID: number;
     Review: string;
@@ -24,7 +24,7 @@ const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
     const hasHalfStar = rating % 1 !== 0;
 
     return (
-        <div className="flex items-center">
+        <div className="star-rating">
             {[...Array(5)].map((_, index) => {
                 if (index < fullStars) {
                     return <Star key={index} color="#FFD700" fill="#FFD700" className="w-5 h-5" />;
@@ -34,14 +34,14 @@ const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
                 }
                 return <Star key={index} color="#E0E0E0" className="w-5 h-5" />;
             })}
-            <span className="ml-2 text-gray-600">({rating}/10)</span>
+            <span>({rating}/10)</span>
         </div>
     );
 };
 
 const CarReviewCard: React.FC<CarReviewCardProps> = ({ review, rating, id }) => {
     return (
-        <div className="bg-white shadow-md rounded-lg p-6 mb-4">
+        <div className="review-card">
             <div className="flex justify-between items-center mb-3">
                 <h3 className="text-lg font-semibold">Review #{id}</h3>
                 <StarRating rating={rating * 0.5} />
@@ -62,35 +62,25 @@ const CarReviewsApp: React.FC = () => {
         : reviewData;
 
     return (
-        <div className="container mx-auto px-4 py-8">
-            <h1 className="text-3xl font-bold mb-6 text-center">Toyota Reviews</h1>
+        <div className="container">
+            <h1>Toyota Reviews</h1>
             
-            <div className="flex justify-center mb-6">
-                <div className="bg-gray-100 rounded-lg p-2 inline-flex space-x-2">
-                    {[0, 1, 2, 3, 4].map(rating => (
-                        <button
-                            key={rating}
-                            onClick={() => setSelectedRating(rating)}
-                            className={`px-4 py-2 rounded-md transition-colors ${
-                                selectedRating === rating 
-                                    ? 'bg-blue-500 text-white' 
-                                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                            }`}
-                        >
-                            {rating + 1} Star{rating !== 4 ? 's' : ''}
-                        </button>
-                    ))}
+            <div className="rating-filter">
+                {[0, 1, 2, 3, 4].map(rating => (
                     <button
-                        onClick={() => setSelectedRating(null)}
-                        className={`px-4 py-2 rounded-md ${
-                            selectedRating === null 
-                                ? 'bg-blue-500 text-white' 
-                                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                        }`}
+                        key={rating}
+                        onClick={() => setSelectedRating(rating)}
+                        className={`rating-button ${selectedRating === rating ? 'active' : ''}`}
                     >
-                        All Reviews
+                        {rating + 1} Star{rating !== 4 ? 's' : ''}
                     </button>
-                </div>
+                ))}
+                <button
+                    onClick={() => setSelectedRating(null)}
+                    className={`rating-button ${selectedRating === null ? 'active' : ''}`}
+                >
+                    All Reviews
+                </button>
             </div>
 
             <div className="max-w-2xl mx-auto">
