@@ -1,7 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/style.css";
+import axios from "axios";
 
 const ToyotAIApp: React.FC = () => {
+  const [array, setArray] = useState([]);
+  const [customPrompt, setCustomPrompt] = useState(""); // Added state for customPrompt
+  const [response, setResponse] = useState(""); // Added state to store response
+
+  // const axios = require("axios").default;
+
+  const fetchAPI = async () => {
+    const response = await axios.get("http://localhost:6969/api/users");
+    console.log(response.data.users); // This will print the users to the console
+    setArray(response.data.users);
+  };
+
+  useEffect(() => {
+    fetchAPI();
+  }, []);
+
+  const submitPrompt = async () => {
+    // Added function to handle customPrompt submission
+    try {
+      const res = await axios.post("http://localhost:6969/api/customPrompt", {
+        customPrompt,
+      });
+      setResponse(res.data.message);
+    } catch (error) {
+      console.error("Error posting customPrompt:", error);
+      setResponse("Failed to submit.");
+    }
+  };
   const cars = [
     {
       model: "Toyota Camry",
@@ -24,7 +53,6 @@ const ToyotAIApp: React.FC = () => {
   const [quizVisible, setQuizVisible] = useState(false);
   const [carsVisible, setCarsVisible] = useState(false);
   const [filteredCars, setFilteredCars] = useState(cars);
-  const [customPrompt, setCustomPrompt] = useState("");
 
   const toggleQuizForm = () => {
     setQuizVisible(!quizVisible);
@@ -63,15 +91,22 @@ const ToyotAIApp: React.FC = () => {
     alert("Quiz Submitted!");
   };
 
-  const submitPrompt = () => {
-    alert("Custom search submitted!");
-  };
-
   return (
     <div>
       <header>
         <h1>ToyotAI - Find Your Perfect Car</h1>
       </header>
+
+      <div className="app-container">
+        <div className="user-list">
+          {array.map((user, index) => (
+            <div className="user-item" key={index}>
+              <span>{user}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="logo">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlh9-G6jifPvpfVs9e2BCZVlvVbOKREZneyg&s"
@@ -98,7 +133,7 @@ const ToyotAIApp: React.FC = () => {
           <button onClick={toggleQuizForm}>Take the Quiz</button>
           <br></br>
           <br></br>
-          <div className="custom-prompt">
+          <div>
             <input
               type="text"
               value={customPrompt}
@@ -107,6 +142,8 @@ const ToyotAIApp: React.FC = () => {
             />
             <button onClick={submitPrompt}>Submit</button>
           </div>
+          {response && <p>{response}</p>} {/* Display response */}
+          <div />
           <form id="quiz-form">
             <label htmlFor="model">Model</label>
             <input type="text" id="model" placeholder="e.g., Camry, Corolla" />
