@@ -122,14 +122,10 @@ const ToyotAIApp: React.FC = () => {
         />
       </div>
       <div className="buttons">
-        <button id="find-car-btn" onClick={toggleQuizForm}>
+        <button className="find-car-btn" onClick={toggleQuizForm}>
           Find Your Ideal Car
         </button>
-        <button
-          id="see-all-cars-btn"
-          className="secondary"
-          onClick={toggleCarsContainer}
-        >
+        <button className="see-all-cars-btn" onClick={toggleQuizForm}>
           See All Cars
         </button>
       </div>

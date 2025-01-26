@@ -64,11 +64,11 @@ const Navbar = () => {
 
       <div
         style={{
-          padding: "20px",
+          padding: "0px",
           background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
           borderRadius: "12px",
           boxShadow: "0 12px 24px rgba(0, 0, 0, 0.7)",
-          marginTop: "20px",
+          marginTop: "0px",
           color: "#fff",
           fontFamily: "'Orbitron', sans-serif",
         }}
