@@ -7,7 +7,7 @@ cors = CORS(app, origins='*')
 
 @app.route('/api/users', methods=['GET'])
 def users():
-    return jsonify({'users': ['Arkad', 'Pranav', 'Lolo']})
+    return jsonify({'users': [493578/22, 'Pranav', 'Lolo']})
 
 
 if __name__ == '__main__':
