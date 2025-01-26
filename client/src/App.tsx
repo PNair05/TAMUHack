@@ -24,8 +24,12 @@ const ToyotAIApp: React.FC = () => {
   const [quizVisible, setQuizVisible] = useState(false);
   const [carsVisible, setCarsVisible] = useState(false);
   const [filteredCars, setFilteredCars] = useState(cars);
+  const [customPrompt, setCustomPrompt] = useState("");
 
-  const toggleQuizForm = () => setQuizVisible(!quizVisible);
+  const toggleQuizForm = () => {
+    setQuizVisible(!quizVisible);
+    setCarsVisible(false);
+  };
   const toggleCarsContainer = () => setCarsVisible(!carsVisible);
 
   const handleAISearch = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -70,7 +74,7 @@ const ToyotAIApp: React.FC = () => {
       </header>
       <div className="logo">
         <img
-          src="https://global.toyota/pages/global_toyota/mobility/toyota-brand/emblem_001.jpg"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlh9-G6jifPvpfVs9e2BCZVlvVbOKREZneyg&s"
           alt="ToyotAI Logo"
         />
       </div>
@@ -93,7 +97,16 @@ const ToyotAIApp: React.FC = () => {
           <p>Choose a method to find your ideal car:</p>
           <button onClick={toggleQuizForm}>Take the Quiz</button>
           <br></br>
-          <button onClick={submitPrompt}>Enter a Custom Prompt</button>
+          <br></br>
+          <div className="custom-prompt">
+            <input
+              type="text"
+              value={customPrompt}
+              onChange={(e) => setCustomPrompt(e.target.value)}
+              placeholder="Enter a custom prompt"
+            />
+            <button onClick={submitPrompt}>Submit</button>
+          </div>
           <form id="quiz-form">
             <label htmlFor="model">Model</label>
             <input type="text" id="model" placeholder="e.g., Camry, Corolla" />
