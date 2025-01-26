@@ -31,7 +31,7 @@ const ToyotAIApp: React.FC = () => {
       type: "Sedan",
       price: 25000,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRENy11OwlDkxdwjalVia9uY4HXEBNEfdhMIsaGJZCOEZuKL5Zc",
+        "https://vehicle-images.dealerinspire.com/bf16-110004142/thumbnails/large/4T1DAACKXSU580544/ae2bc88dcf0b96a15265309df4b02f9d.png",
       description: "Reliable and fuel-efficient sedan.",
     },
     {
