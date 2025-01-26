@@ -14,7 +14,7 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('https://images.wallpaperscraft.com/image/single/toyota_gt86_toyota_car_208037_3840x2160.jpg');
+  background-image: url('https://www.thedrive.com/wp-content/uploads/2024/11/A90-Supra-Final-Edition-20241128_03_08.jpg?strip=all&quality=85');
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--text-color);
@@ -186,22 +186,28 @@ header h1 {
 .see-all-cars-btn {
     padding: 12px 24px;
     background-color: #1E1E1E;
-    color: #F0F0F0;
+    filter: brightness(500%);
+    color: #864b4b;
     border: 2px solid #4A4A4A;
-    border-radius: 6px;
+    border-color: black;
+    border-radius: 10px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
     cursor: pointer;
     outline: none;
+    opacity: 0.5;
 }
 
 .find-car-btn:hover,
 .see-all-cars-btn:hover {
+
     background-color: #2C2C2C;
     border-color: #6A6A6A;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 15px rgba(235, 10, 30, 0.6), 0 0 30px rgba(235, 10, 30, 0.4), 0 0 45px rgba(235, 10, 30, 0.2);
 }
 
 .find-car-btn:focus,
