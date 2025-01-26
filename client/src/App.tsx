@@ -25,7 +25,10 @@ const ToyotAIApp: React.FC = () => {
   const [carsVisible, setCarsVisible] = useState(false);
   const [filteredCars, setFilteredCars] = useState(cars);
 
-  const toggleQuizForm = () => setQuizVisible(!quizVisible);
+  const toggleQuizForm = () => {
+    setQuizVisible(!quizVisible);
+    setCarsVisible(false);
+  };
   const toggleCarsContainer = () => setCarsVisible(!carsVisible);
 
   const handleAISearch = (event: React.ChangeEvent<HTMLInputElement>) => {
