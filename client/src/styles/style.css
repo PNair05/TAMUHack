@@ -6,8 +6,7 @@
   --tertiary-color: #10c998;
   --quaternary-color: #f39c12;
   --text-color: #ffffff;
-  --background-color: #bdaeae;
-  --brick-color: #897373;
+  --background-color: #ffffff;
   --neon-glow: 0 0 10px rgba(235, 10, 30, 0.5), 0 0 20px rgba(235, 10, 30, 0.3), 0 0 30px rgba(235, 10, 30, 0.1);
 }
 
@@ -15,11 +14,11 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--background-color);
+   background-color: var(--background-color);
   background-image: linear-gradient(335deg, var(--brick-color) 23px, transparent 23px),
     linear-gradient(155deg, var(--brick-color) 23px, transparent 23px),
     linear-gradient(335deg, var(--brick-color) 23px, transparent 23px),
-    linear-gradient(155deg, var(--brick-color) 23px, transparent 23px);
+    linear-gradient(155deg, var(--brick-color) 23px, transparent 23px); 
   background-size: 58px 58px;
   background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
   color: var(--text-color);
@@ -30,8 +29,7 @@ header {
   background: transparent;
   border-bottom: 2px solid var(--primary-color);
   color: var(--primary-color);
-  text-align: center;
-  padding: 20px 0;
+  text-align: left;
   box-shadow: var(--neon-glow);
   position: relative;
   overflow: hidden;
@@ -87,6 +85,7 @@ header h1 {
   transition: transform 0.3s ease;
   animation: float 9s ease-in-out infinite;
   filter: drop-shadow(0 0 10px rgba(235, 10, 30, 0.5));
+  background-color: black
 }
 
 @keyframes float {
@@ -406,6 +405,10 @@ select:hover {
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
+    background-color: red;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: red;
   }
   .buttons {
     flex-direction: column;
@@ -433,5 +436,6 @@ select:hover {
   .cars-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
+
 }
 

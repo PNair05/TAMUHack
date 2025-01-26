@@ -120,7 +120,7 @@ const ToyotAIApp: React.FC = () => {
 
       <div className="logo">
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlh9-G6jifPvpfVs9e2BCZVlvVbOKREZneyg&s"
+          src="https://static.vecteezy.com/system/resources/previews/020/927/075/non_2x/toyota-brand-logo-car-symbol-white-design-japan-automobile-illustration-with-black-background-free-vector.jpg"
           alt="ToyotAI Logo"
         />
       </div>
