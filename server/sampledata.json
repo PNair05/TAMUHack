@@ -1,0 +1,18 @@
+[
+    { "ID": 3, "Model": "Toyota Corolla" },
+    { "ID": 4, "Model": "Toyota Corolla Hatchback" },
+    { "ID": 8, "Model": "Toyota GR86" },
+    { "ID": 1, "Model": "Toyota Camry" },
+    { "ID": 5, "Model": "Toyota Prius Plug-in Hybrid" },
+    { "ID": 10, "Model": "Toyota Sienna" },
+    { "ID": 16, "Model": "Toyota bZ4X" },
+    { "ID": 6, "Model": "Toyota RAV4 Plug-in Hybrid" },
+    { "ID": 15, "Model": "Toyota 4Runner" },
+    { "ID": 2, "Model": "Toyota Crown Signia" },
+    { "ID": 14, "Model": "Toyota Avalon" },
+    { "ID": 11, "Model": "Toyota C-HR" },
+    { "ID": 9, "Model": "Toyota Supra" },
+    { "ID": 7, "Model": "Toyota Grand Highlander Hybrid" },
+    { "ID": 13, "Model": "Toyota Land Cruiser" },
+    { "ID": 12, "Model": "Toyota Sequoia" }
+  ]
