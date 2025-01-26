@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./styles/style.css";
+import Navbar from "./components/navbar";
+// import Questions from "./pages/questions.jsx";
+import Test from "./pages/Test";
 import axios from "axios";
 
 const ToyotAIApp: React.FC = () => {
   const [array, setArray] = useState([]);
   const [customPrompt, setCustomPrompt] = useState(""); // Added state for customPrompt
   const [response, setResponse] = useState(""); // Added state to store response
+  // const [activePage, setActivePage] = useState('home');
 
   // const axios = require("axios").default;
 
@@ -90,9 +94,16 @@ const ToyotAIApp: React.FC = () => {
   const submitQuiz = () => {
     alert("Quiz Submitted!");
   };
+  const [activePage, setActivePage] = useState("home");
+
+  const handlePageChange = (page: string) => {
+    setActivePage(page);
+  };
 
   return (
     <div>
+      <Navbar />
+
       <header>
         <h1>ToyotAI - Find Your Perfect Car</h1>
       </header>
