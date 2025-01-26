@@ -15,15 +15,15 @@
 //   }, []);
 
 //   return (
-//     <div className="app-container">
-//       <div className="user-list">
-//         {array.map((user, index) => (
-//           <div className="user-item" key={index}>
-//             <span>{user}</span>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
+    // <div className="app-container">
+    //   <div className="user-list">
+    //     {array.map((user, index) => (
+    //       <div className="user-item" key={index}>
+    //         <span>{user}</span>
+    //       </div>
+    //     ))}
+    //   </div>
+    // </div>
 //   );
 // }
 
