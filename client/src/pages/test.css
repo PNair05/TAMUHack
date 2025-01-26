@@ -1,0 +1,82 @@
+/* Global Styles */
+body {
+    background-color: #f4f6f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Review Cards */
+.review-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: scale(1.02);
+}
+
+/* Rating Buttons */
+.rating-filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.rating-button {
+    background-color: #e6e6e6;
+    border: none;
+    border-radius: 8px;
+    color: #333;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.rating-button:hover {
+    background-color: #d0d0d0;
+}
+
+.rating-button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rating-filter {
+        flex-wrap: wrap;
+    }
+
+    .rating-button {
+        flex-grow: 1;
+        margin: 5px;
+    }
+}
+
+/* Typography */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    align-items: center;
+}
+
+.star-rating span {
+    margin-left: 10px;
+    color: #6c757d;
+}
