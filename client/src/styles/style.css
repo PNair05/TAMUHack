@@ -110,6 +110,7 @@ header h1 {
   display: flex;
   justify-content: center;
   gap: 20px;
+  border-radius: 20px;
 }
 
 .btn {
@@ -282,10 +283,11 @@ header h1 {
 }
 
 .quiz-container button:hover {
-  background: #2eefa0;
+  background: #EB0A1E;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .cars-container {
   display: grid;
