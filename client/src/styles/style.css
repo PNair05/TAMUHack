@@ -2,14 +2,14 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #fff;
     color: #000;
     text-align: center;
   }
   
   header {
     background: linear-gradient(90deg, #1a1a1a, #0d0d0d);
-    color: #0ff;
+    color: #EB0A1E;
     text-align: center;
     padding: 20px 0;
     box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
@@ -25,7 +25,6 @@ body {
   .logo img {
     width: 120px;
     height: auto;
-    filter: drop-shadow(0 0 10px #0ff);
   }
   
   .buttons {
@@ -33,6 +32,66 @@ body {
     margin: 30px auto;
     width: 90%;
   }
+  
+  /* button styles */
+  #find-car-btn {
+    display: inline-block;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    background-color: #EB0A1E; /* Primary red */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase; /* Capitalize the text */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-right: 10px; /* Adds 10px space to the right of the button */
+}
+
+#find-car-btn:hover {
+    color: #EB0A1E;
+    background-color: #fff; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+#find-car-btn:active {
+    background-color: #EB0A1E; /* Even darker blue when clicked */
+    transform: translateY(0); /* Reset lift */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle press shadow */
+}
+
+/*secondary button*/
+#see-all-cars-btn.secondary {
+  display: inline-block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  background-color: #EB0A1E; /* Primary green */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase; /* Capitalize the text */
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#see-all-cars-btn.secondary:hover {
+  color: red;
+  background-color: #fff; /* Darker green on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+#see-all-cars-btn.secondary:active {
+  background-color: #EB0A1E; /* Even darker green when clicked */
+  transform: translateY(0); /* Reset lift */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle press shadow */
+}
+
   
   .buttons a {
     display: inline-block;
@@ -43,11 +102,11 @@ body {
     text-decoration: none;
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
-    border: 2px solid #0ff;
+    border: 2px solid #EB0A1E;
   }
   
   .buttons a:hover {
-    background: #0ff;
+    background: #EB0A1E;
     color: #000;
   }
   
@@ -63,7 +122,7 @@ body {
   
   .quiz-container, .car-item {
     background: #fff;
-    border: 1px solid #0ff;
+    border: 1px solid #EB0A1E;
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
@@ -78,13 +137,13 @@ body {
   }
   
   .quiz-container h3, .car-item h4 {
-    color: #0ff;
+    color: #EB0A1E;
     font-size: 22px;
   }
   
   .quiz-container input, .quiz-container select {
     background: #fff;
-    border: 1px solid #0ff;
+    border: 1px solid #EB0A1E;
     color: #000;
     padding: 15px;
     border-radius: 5px;
@@ -93,7 +152,7 @@ body {
   }
   
   .quiz-container button {
-    background: #0ff;
+    background: #EB0A1E;
     color: #000;
     border: 2px solid #000;
     padding: 15px 25px;
@@ -130,7 +189,7 @@ body {
   .search-bar input {
     flex-grow: 1;
     padding: 15px;
-    border: 2px solid #0ff;
+    border: 2px solid #EB0A1E;
     border-radius: 50px 0 0 50px;
     background: #fff;
     color: #000;
@@ -138,7 +197,7 @@ body {
   
   .search-bar button {
     padding: 15px 30px;
-    background: #0ff;
+    background: #EB0A1E;
     color: #000;
     border: 2px solid #000;
     border-radius: 0 50px 50px 0;
