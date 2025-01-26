@@ -17,7 +17,7 @@ const questions = [
   { id: "Type", text: "Electric or Gas-Powered Vehicle?" },
 ];
 
-export default function CarPersonalityQuiz() {
+export default function CarPersonalityQuiz({setActivePage}: {setActivePage: (page: string) => void}) {
   const [data, setData] = useState(initialData);
 
   const handleSelectionChange = (id, value) => {
@@ -34,6 +34,7 @@ export default function CarPersonalityQuiz() {
       return acc;
     }, {});
     console.log(responseJSON);
+    setActivePage("results");
   };
 
   return (
