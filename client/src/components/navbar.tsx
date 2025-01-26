@@ -1,5 +1,6 @@
-// import Questions from "./pages/questions.tsx";
 // Import the questions page
+
+import Questions from "../pages/questions.tsx";
 import Test from "../pages/test.tsx";
 import { useState } from "react";
 
@@ -20,7 +21,7 @@ const Navbar = () => {
             onClick={() => handlePageChange("home")}
             style={{
               margin: "0 20px",
-              color: activePage === "home" ? "yellow" : "white",
+              color: activePage === "home" ? "bisque" : "white",
               cursor: "pointer",
             }}
           >

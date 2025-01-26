@@ -103,11 +103,9 @@ const ToyotAIApp: React.FC = () => {
   return (
     <div>
       <Navbar />
-
       <header>
         <h1>ToyotAI - Find Your Perfect Car</h1>
       </header>
-
       <div className="app-container">
         <div className="user-list">
           {array.map((user, index) => (
@@ -117,7 +115,6 @@ const ToyotAIApp: React.FC = () => {
           ))}
         </div>
       </div>
-
       <div className="logo">
         <img
           src="https://static.vecteezy.com/system/resources/previews/020/927/075/non_2x/toyota-brand-logo-car-symbol-white-design-japan-automobile-illustration-with-black-background-free-vector.jpg"
@@ -136,7 +133,6 @@ const ToyotAIApp: React.FC = () => {
           See All Cars
         </button>
       </div>
-
       {quizVisible && (
         <div id="quiz-container" className="quiz-container">
           <h3>Find Your Ideal Car</h3>
@@ -175,7 +171,6 @@ const ToyotAIApp: React.FC = () => {
           </form>
         </div>
       )}
-
       {carsVisible && (
         <div id="car-list-container" className="container">
           <h3>See All Cars</h3>
