@@ -70,7 +70,7 @@ const ToyotAIApp: React.FC = () => {
       </header>
       <div className="logo">
         <img
-          src="https://global.toyota/pages/global_toyota/mobility/toyota-brand/emblem_001.jpg"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlh9-G6jifPvpfVs9e2BCZVlvVbOKREZneyg&s"
           alt="ToyotAI Logo"
         />
       </div>
