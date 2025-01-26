@@ -1,7 +1,6 @@
 // Import the questions page
 
 import Questions from "../pages/questions.tsx";
-import ResultsPage from "../pages/ResultsPage.tsx";
 import Test from "../pages/test.tsx";
 import { useState } from "react";
 
@@ -11,7 +10,6 @@ const Navbar = () => {
   const [activePage, setActivePage] = useState("home");
 
   const handlePageChange = (page: string) => {
-    console.log("Changing page to:", page);
     setActivePage(page);
   };
 
@@ -76,7 +74,9 @@ const Navbar = () => {
         }}
       >
         {activePage === "home"}
-        {activePage === "questions" && <Questions setActivePage={setActivePage} />}
+        {activePage === "questions" && (
+          <Questions setActivePage={setActivePage} />
+        )}
         {activePage === "results" && <ResultsPage />}
         {activePage === "test" && <Test />}
       </div>
