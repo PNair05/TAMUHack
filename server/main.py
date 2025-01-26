@@ -7,7 +7,7 @@ app = Flask(__name__)
 cors = CORS(app, origins='*')
 
 users_list = [66/22, 'Pranav', 'Lolo']  # Moved to a global variable
-car_list = pd.read_csv('Toyota_Models.csv')  # Moved to a global variable
+car_list = pd.read_csv('../Toyota_Models.csv')  # Moved to a global variable
 
 @app.route('/api/users', methods=['GET'])
 def users():
@@ -40,6 +40,7 @@ def filterCars():
 
         # Filter and sort the car list
         filtered_json = filter_and_sort_cars(car_list, filters, sort_by)
+        print("Successfully filtered and sorted cars.")
         return jsonify({'filtered_cars': filtered_json})
     except Exception as e:
         print("Error processing request:", str(e))
@@ -60,14 +61,15 @@ def filter_and_sort_cars(car_list, filters, sort_by=None):
     # Apply filters
     for column, value in filters.items():
         if column in car_list.columns:
-            if isinstance(value, str) and value.startswith('<'):
-                threshold = float(value[1:])
-                car_list = car_list[car_list[column] < threshold]
-            elif isinstance(value, str) and value.startswith('>'):
-                threshold = float(value[1:])
-                car_list = car_list[car_list[column] > threshold]
-            else:
-                car_list = car_list[car_list[column] == value]
+            # if isinstance(value, str) and value.startswith('<'):
+            #     threshold = float(value[1:])
+            #     car_list = car_list[car_list[column] < threshold]
+            # elif isinstance(value, str) and value.startswith('>'):
+            #     threshold = float(value[1:])
+            #     car_list = car_list[car_list[column] > threshold]
+            # else:
+            car_list = car_list[car_list[column] == value]
+            print(car_list)
 
     # Sort the DataFrame if sorting preferences are provided
     if sort_by:

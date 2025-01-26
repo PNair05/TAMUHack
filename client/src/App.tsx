@@ -13,16 +13,6 @@ const ToyotAIApp: React.FC = () => {
 
   // const axios = require("axios").default;
 
-  const fetchAPI = async () => {
-    const response = await axios.get("http://localhost:6969/api/users");
-    console.log(response.data.users); // This will print the users to the console
-    setArray(response.data.users);
-  };
-
-  useEffect(() => {
-    fetchAPI();
-  }, []);
-
   const submitPrompt = async () => {
     // Added function to handle customPrompt submission
     try {
@@ -91,15 +81,43 @@ const ToyotAIApp: React.FC = () => {
     setFilteredCars(sortedCars);
   };
 
-  const submitQuiz = () => {
-    alert("Quiz Submitted!");
-  };
-  const [activePage, setActivePage] = useState("home");
+  const [model, setModel] = useState("");
+  const [priceRange, setPriceRange] = useState("");
+  const [type, setType] = useState("");
 
-  const handlePageChange = (page: string) => {
-    setActivePage(page);
+  const submitQuiz = async () => {
+    try {
+      // Prepare filters from form inputs
+      const filters = {};
+      if (model) filters.model = model;
+      if (priceRange) {
+        const [minPrice, maxPrice] = priceRange
+          .replace(/\$/g, "")
+          .split("-")
+          .map((str) => str.trim());
+        if (minPrice) filters.price = `>${minPrice}`;
+        if (maxPrice) filters.price = `<${maxPrice}`;
+      }
+      if (type) filters.type = type;
+
+      // Make API call
+      const response = await axios.post(
+        "http://localhost:6969/api/filterCars",
+        {
+          filters,
+        }
+      );
+
+      // Update state with the filtered cars
+      setFilteredCars(JSON.parse(response.data.filtered_cars));
+    } catch (error) {
+      console.error("Error fetching filtered cars:", error);
+    }
   };
 
+  useEffect(() => {
+    console.log(filteredCars.length > 0);
+  }, [filteredCars]);
   return (
     <div>
       <Navbar />
@@ -149,22 +167,70 @@ const ToyotAIApp: React.FC = () => {
           <div />
           <form id="quiz-form">
             <label htmlFor="model">Model</label>
-            <input type="text" id="model" placeholder="e.g., Camry, Corolla" />
+            <select
+              id="model"
+              value={model}
+              onChange={(e) => setModel(e.target.value)}
+            >
+              <option value="">Select a model</option>
+              <option value="Camry">Camry</option>
+              <option value="Corolla">Corolla</option>
+              <option value="Sienna">Sienna</option>
+            </select>
 
             <label htmlFor="price-range">Price Range</label>
-            <input
-              type="text"
+            <select
               id="price-range"
-              placeholder="e.g., $20,000 - $30,000"
-            />
+              value={priceRange}
+              onChange={(e) => setPriceRange(e.target.value)}
+            >
+              <option value="">Select a price range</option>
+              <option value="$0 - $20,000">$0 - $20,000</option>
+              <option value="$20,000 - $30,000">$20,000 - $30,000</option>
+              <option value="$30,000 - $40,000">$30,000 - $40,000</option>
+            </select>
 
             <label htmlFor="type">Type of Car</label>
-            <input type="text" id="type" placeholder="e.g., SUV, Sedan" />
+            <select
+              id="type"
+              value={type}
+              onChange={(e) => setType(e.target.value)}
+            >
+              <option value="">Select a type</option>
+              <option value="SUV">SUV</option>
+              <option value="Sedan">Sedan</option>
+              <option value="Truck">Truck</option>
+            </select>
 
             <button type="button" onClick={submitQuiz}>
               Submit Quiz
             </button>
           </form>
+          <div id="car-results">
+            {Array.isArray(filteredCars) && filteredCars.length > 0 ? (
+              <div>
+                <h2>Filtered Cars</h2>
+                <div className="car-list">
+                  {filteredCars.map((car, index) => (
+                    <div key={index} className="car-card">
+                      <img
+                        src={car.image || "default-car-image.jpg"}
+                        alt={car.model}
+                        className="car-image"
+                      />
+                      <div className="car-details">
+                        <h3>{car.model}</h3>
+                        <p>Type: {car.type}</p>
+                        <p>Price: ${car.price}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <p>No cars match the selected filters.</p>
+            )}
+          </div>
         </div>
       )}
       {carsVisible && (
