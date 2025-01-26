@@ -1,0 +1,402 @@
+[
+    {
+        "ID": 1,
+        "Review": " This car continues to deliver a comfortable ride with its smooth handling and spacious interior. The tech features are user-friendly and the fuel efficiency is impressive!",
+        "Rating": 8.0
+    },
+    {
+        "ID": 2,
+        "Review": " This car feels stale and uninspiring. The interior is bland, and the tech seems outdated compared to competitors. Not worth the price tag!",
+        "Rating": 3.0
+    },
+    {
+        "ID": 3,
+        "Review": "Absolutely love the hybrid version! It's fast, efficient, and surprisingly spacious. Perfect for family trips!",
+        "Rating": 9.0
+    },
+    {
+        "ID": 4,
+        "Review": "For the price, the performance is underwhelming. It's an okay car, but nothing that makes me fall in love with it.",
+        "Rating": 5.0
+    },
+    {
+        "ID": 5,
+        "Review": "This car is extremely reliable, great for daily commuting, but don't expect luxury or cutting-edge tech. It's a solid choice if you like practical cars.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 6,
+        "Review": " This car blends luxury with performance beautifully, showcasing a sleek design and comfortable ride. Truly a head-turner!",
+        "Rating": 9.0
+    },
+    {
+        "ID": 7,
+        "Review": "Terrible fuel efficiency and an awkward driving position make this car a struggle. It seems like Toyota is trying too hard to be flashy.",
+        "Rating": 3.0
+    },
+    {
+        "ID": 8,
+        "Review": "I was disappointed with This car's fuel efficiency. For a luxury vehicle, I expected better. Feels more like a sedan from 2015.",
+        "Rating": 4.0
+    },
+    {
+        "ID": 9,
+        "Review": "Wonderful build quality and the power under the hood is fantastic. It feels premium, but the price tag is a bit steep for what you get.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 10,
+        "Review": "Nice attempt at a luxury sedan, but I'm not sold on the overall concept. I'd rather stick with more established rivals.",
+        "Rating": 5.0
+    },
+    {
+        "ID": 11,
+        "Review": " This car is a reliable and fuel-efficient car. Ideal for those who need something practical for daily commuting.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 12,
+        "Review": "Okay performance, but the interior feels a bit cheap compared to its competitors. It does the job, but lacks flair.",
+        "Rating": 6.0
+    },
+    {
+        "ID": 13,
+        "Review": "I love this car! It's stylish, modern, and packed with safety features. Perfect for young professionals!",
+        "Rating": 9.0
+    },
+    {
+        "ID": 14,
+        "Review": "I was hoping for an upgrade, but this car is just a bland commuter. The tech features are clunky and not user-friendly.",
+        "Rating": 3.0
+    },
+    {
+        "ID": 15,
+        "Review": "Great car for its value; however, the engine could use a bit more power. Perfect for city driving!",
+        "Rating": 7.0
+    },
+    {
+        "ID": 16,
+        "Review": "The design of this car is sleek and sporty! It handles really well and has ample cargo space.",
+        "Rating": 9.0
+    },
+    {
+        "ID": 17,
+        "Review": "It's fun to drive, but the back seat is cramped, making it less suitable for families. A solid option if you're alone or a couple.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 18,
+        "Review": "Not impressed by the performance. It feels sluggish and I expected more out of a hatchback. There are better options out there.",
+        "Rating": 4.0
+    },
+    {
+        "ID": 19,
+        "Review": "I appreciate Toyota's reliability, and the hatchback design is practical. However, the engine noise can be annoying on the highway.",
+        "Rating": 6.0
+    },
+    {
+        "ID": 20,
+        "Review": "Stylish and practical! Perfect for city dwellers who need space and efficiency. Loving the tech features!",
+        "Rating": 8.0
+    },
+    {
+        "ID": 21,
+        "Review": "Fantastic efficiency! this car is a game-changer for eco-conscious drivers. The electric range is impressive!",
+        "Rating": 9.0
+    },
+    {
+        "ID": 22,
+        "Review": "Love the fuel savings, but I find the design still polarizing. It's not the best-looking car on the road.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 23,
+        "Review": "I feel like I'm driving a science project. The tech is overwhelming, and the ride quality is quite poor. Not worth the hype.",
+        "Rating": 3.7
+    },
+    {
+        "ID": 24,
+        "Review": "Great technology and safety features! I wish it had more power\u2014I sometimes feel it struggles on hills.",
+        "Rating": 6.0
+    },
+    {
+        "ID": 25,
+        "Review": "What a comfortable ride! It's perfect for daily driving, but if you're looking for luxury, look elsewhere.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 26,
+        "Review": " this car perfectly combines functionality with eco-friendliness. Lots of space, great fuel economy!",
+        "Rating": 9.0
+    },
+    {
+        "ID": 27,
+        "Review": "Overpriced for what you get. The electric range is disappointing, and the ride is bumpy over rough roads.",
+        "Rating": 3.8
+    },
+    {
+        "ID": 28,
+        "Review": "Fantastic for the family! The cargo space and comfort are top-notch. The electric-only mode is useful for short trips.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 29,
+        "Review": "The acceleration is decent, but it's not the sportiest SUV out there. If you need a utility vehicle, it may suffice.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 30,
+        "Review": "Great overall vehicle, but the infotainment system can be slow at times. Still, it's hard to beat the reliability of a Toyota.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 31,
+        "Review": " this car is spacious and perfect for larger families. It's smooth on the road and offers great fuel efficiency.",
+        "Rating": 9.0
+    },
+    {
+        "ID": 32,
+        "Review": "I like the overall look and feel, but I find the third row a bit cramped. It's not the most comfortable for long trips.",
+        "Rating": 6.0
+    },
+    {
+        "ID": 33,
+        "Review": "The drivability is superb, and the hybrid tech is remarkable. If you need room and efficiency, this is a solid choice.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 34,
+        "Review": "Honestly, it lacks punch. Good for commuting but doesn't excite when driving. The price seems just a tad high.",
+        "Rating": 5.0
+    },
+    {
+        "ID": 35,
+        "Review": "Perfect for road trips! It has plenty of space, and it's comfortable even for long drives. I appreciate the innovative safety features.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 36,
+        "Review": " this car is pure fun behind the wheel. It's an exhilarating drive with nimble handling\u2014just what I wanted!",
+        "Rating": 9.0
+    },
+    {
+        "ID": 37,
+        "Review": "Great performance, but the rear seat is too cramped for anyone over 5 feet tall. I can overlook some practicality.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 38,
+        "Review": "Looks great on paper, but in reality, it just doesn't deliver. Feels awkward during turns\u2014definitely not a driver's car.",
+        "Rating": 5.0
+    },
+    {
+        "ID": 39,
+        "Review": "The steering feedback is incredible! If you enjoy driving, this car is a great choice. But it's definitely not a family vehicle.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 40,
+        "Review": "Stylish and relatively affordable for a sports car, but I expected more tech features for that price. Still a great drive.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 41,
+        "Review": "Still a thrilling car to drive! Stunning design and a powerful engine. this car is a head-turner.",
+        "Rating": 9.0
+    },
+    {
+        "ID": 42,
+        "Review": "Great performance, but I find the trunk space lacking. It's a sports car, but I expected a bit more practicality.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 43,
+        "Review": "I had high expectations, but the performance just isn't there. It doesn't feel as responsive as it should.",
+        "Rating": 3.0
+    },
+    {
+        "ID": 44,
+        "Review": "An amazing blend of luxury and sportiness! It's fast, fun, and always a joy to take out on the roads.",
+        "Rating": 9.0
+    },
+    {
+        "ID": 45,
+        "Review": "The price point is high, plus I wished the ride was smoother on uneven roads. It's definitely meant for sport lovers.",
+        "Rating": 6.0
+    },
+    {
+        "ID": 46,
+        "Review": " this car is fantastic for families! Spacious, comfortable, and loaded with tech features. The hybrid system is a dream!",
+        "Rating": 9.0
+    },
+    {
+        "ID": 47,
+        "Review": "Serious buyer's remorse. I expected a lot more for the money. The performance is lackluster and the design is dull.",
+        "Rating": 4.0
+    },
+    {
+        "ID": 48,
+        "Review": "Stylish for a minivan! I appreciate the emphasis on safety and family-friendly features. Perfect choice for our larger family!",
+        "Rating": 8.0
+    },
+    {
+        "ID": 49,
+        "Review": "The third row could be more user-friendly. Overall, a good vehicle, but it lacks some refinement compared to rivals.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 50,
+        "Review": "Great fuel efficiency, but the handling feels like driving a boat. It's large, and you feel that size whenever driving.",
+        "Rating": 5.0
+    },
+    {
+        "ID": 51,
+        "Review": " this car is trendy and fun to drive! Compact size makes it perfect for city driving, and the safety features are impressive.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 52,
+        "Review": " this car is awkward to drive. Performance feels sluggish, and the tech is far less intuitive than competitive models.",
+        "Rating": 3.0
+    },
+    {
+        "ID": 53,
+        "Review": "Perfect for young urban dwellers! It combines a unique design with decent fuel economy\u2014much better than my last SUV!",
+        "Rating": 9.0
+    },
+    {
+        "ID": 54,
+        "Review": "I love the exterior, but the interior could use a bit more space. It's comfortable upfront, but backseat passengers feel cramped.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 55,
+        "Review": "Good value for the money, but I was expecting more features for the price. Still, it's a solid daily driver.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 56,
+        "Review": " this car continues to be a rugged and spacious SUV. Perfect for families who love adventures!",
+        "Rating": 9.0
+    },
+    {
+        "ID": 57,
+        "Review": " this car is too big without the payoff of performance. It's clumsy to drive and feels unwieldy in city traffic.",
+        "Rating": 4.0
+    },
+    {
+        "ID": 58,
+        "Review": "The interior is palatial, and it's a great ride for long trips. I do wish it handled better on tight turns.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 59,
+        "Review": "Solid build quality, but the tech feels dated and clunky. For the price, I expected more innovations.",
+        "Rating": 6.0
+    },
+    {
+        "ID": 60,
+        "Review": "Perfect family SUV! Plenty of room and comfort, though it's a beast to park in tight spaces.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 61,
+        "Review": " this car is an absolute classic with impressive off-road capabilities. A remarkable vehicle that commands respect!",
+        "Rating": 9.0
+    },
+    {
+        "ID": 62,
+        "Review": "Luxurious and powerful, but the price is hard to justify compared to competitors with similar features.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 63,
+        "Review": "It's a tank on wheels! Exceptional off-road prowess, but it's a fuel guzzler. Not ideal for city driving.",
+        "Rating": 6.0
+    },
+    {
+        "ID": 64,
+        "Review": " Overly complex controls and a huge price tag, but not as luxurious as I expected. Too disappointing for a vehicle at this level.",
+        "Rating": 5.0
+    },
+    {
+        "ID": 65,
+        "Review": "An expensive choice, but if you love off-roading and don't mind the size, it's a great investment.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 66,
+        "Review": " this car is a true full-size sedan! It's spacious, comfortable, and offers a smooth ride. Excellent for long-distance travel!",
+        "Rating": 9.0
+    },
+    {
+        "ID": 67,
+        "Review": "I admire the comfort and quietness, but the design feels dated. It's a solid car, but it could use more updates.",
+        "Rating": 6.0
+    },
+    {
+        "ID": 68,
+        "Review": "Great value for what you get. The safety features are top-notch and the driving experience is plush!",
+        "Rating": 8.0
+    },
+    {
+        "ID": 69,
+        "Review": "An underwhelming driving experience for a luxury sedan. It's comfortable but lacks that spirited performance I was hoping for.",
+        "Rating": 5.0
+    },
+    {
+        "ID": 70,
+        "Review": "I appreciate the spaciousness and tech features, but I wish it was a bit sportier. Overall, a reliable choice!",
+        "Rating": 7.0
+    },
+    {
+        "ID": 71,
+        "Review": " this car remains the king of body-on-frame SUVs! Perfect for adventure lovers; it's rugged and reliable.",
+        "Rating": 9.0
+    },
+    {
+        "ID": 72,
+        "Review": "While it's great off-road, the fuel economy is pretty poor for everyday driving. Not the best choice for city folk.",
+        "Rating": 6.0
+    },
+    {
+        "ID": 73,
+        "Review": "Amazing storage and the seating is very comfortable. It handles well on tough terrains but is a bit sluggish on highways.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 74,
+        "Review": "I love the toughness of this car, but it feels outdated in tech and design. It needs some modernization to keep pace.",
+        "Rating": 5.0
+    },
+    {
+        "ID": 75,
+        "Review": "Perfect for trips to the mountains! Despite its size, it drives well, but parking can be a challenge in tighter spaces.",
+        "Rating": 7.0
+    },
+    {
+        "ID": 76,
+        "Review": " this car is an exciting new addition to the Toyota lineup! It's stylish, spacious, and offers a great electric driving experience.",
+        "Rating": 9.0
+    },
+    {
+        "ID": 77,
+        "Review": "I love the eco-friendliness but found the range to be a little limited. A great start for Toyota in the EV market!",
+        "Rating": 7.0
+    },
+    {
+        "ID": 78,
+        "Review": "A noble attempt at electric, but it's slow and range is underwhelming. Not a competitive EV in today's market.",
+        "Rating": 4.0
+    },
+    {
+        "ID": 79,
+        "Review": "The tech features are impressive, though the infotainment could be more intuitive. It drives smoothly and has a premium feel.",
+        "Rating": 8.0
+    },
+    {
+        "ID": 80,
+        "Review": "Decent electric SUV but lacks charging options in some areas. It's a safe choice for city driving but may not be ideal for long trips.",
+        "Rating": 6.0
+    }
+]
