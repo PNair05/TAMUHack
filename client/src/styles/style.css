@@ -3,10 +3,10 @@
 :root {
   --primary-color: #eb0a1e;
   --secondary-color: #0a85eb;
-  --tertiary-color: #f65353;
+  --tertiary-color: #4f0404;
   --quaternary-color: #f39c12;
   --text-color: #d7cbcb;
-  --background-color: #520404;
+  --background-color: #9d4a4a;
   --neon-glow: 0 0 10px rgba(235, 10, 30, 0.5), 0 0 10px rgba(235, 10, 30, 0.3), 0 0 30px rgba(235, 10, 30, 0.1);
 }
 
@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://www.thedrive.com/wp-content/uploads/2024/11/A90-Supra-Final-Edition-20241128_03_08.jpg?strip=all&quality=85');
-  background-size: cover;
+  background-size: fill;
   background-repeat: no-repeat;
   color: var(--text-color);
   text-align: center;

@@ -47,7 +47,7 @@ def filterCars():
         filters = data.get('filters', {})  # Get filters
         sort_by = data.get('sort_by', None)  # Get sorting preference
 
-        if not isinstance(filters, dict):
+        if not isinstance(filters, dict):``
             return jsonify({'error': 'Filters must be a dictionary'}), 400
 
         # Filter and sort the car list

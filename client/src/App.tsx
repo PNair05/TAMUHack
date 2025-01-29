@@ -1,17 +1,15 @@
+// Needed Imports
 import React, { useState, useEffect } from "react";
 import "./styles/style.css";
 import Navbar from "./components/navbar";
-// import Questions from "./pages/questions.jsx";
-import Test from "./pages/Test";
 import axios from "axios";
 
 const ToyotAIApp: React.FC = () => {
   const [array, setArray] = useState([]);
   const [customPrompt, setCustomPrompt] = useState(""); // Added state for customPrompt
   const [response, setResponse] = useState(""); // Added state to store response
-  // const [activePage, setActivePage] = useState('home');
 
-  // const axios = require("axios").default;
+  // c
   const fetchAPI = async () => {
     const response = await axios.get("http://localhost:6969/api/users");
     console.log(response.data.users); // This will print the users to the console
@@ -43,6 +41,8 @@ const ToyotAIApp: React.FC = () => {
       }, 9000);
     }
   };
+
+  //######################## CARS DATA BASE JSON ############################
   const cars = [
     {
       ID: 1,
@@ -400,7 +400,10 @@ const ToyotAIApp: React.FC = () => {
     setQuizVisible(!quizVisible);
     setCarsVisible(false);
   };
-  const toggleCarsContainer = () => setCarsVisible(!carsVisible);
+  const toggleCarsContainer = () => {
+    setCarsVisible(!carsVisible);
+    setQuizVisible(false);
+  };
 
   const handleAISearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchInput = event.target.value.toLowerCase();
@@ -432,6 +435,7 @@ const ToyotAIApp: React.FC = () => {
   const [model, setModel] = useState("");
   const [priceRange, setPriceRange] = useState("");
   const [type, setType] = useState("");
+  const [DriveTrain, setDriveTrain] = useState("");
 
   const submitQuiz = async () => {
     try {
@@ -447,6 +451,7 @@ const ToyotAIApp: React.FC = () => {
         if (maxPrice) filters.price = `<${maxPrice}`;
       }
       if (type) filters.type = type;
+      if (DriveTrain) filters.DriveTrain = DriveTrain;
 
       // Make API call
       const response = await axios.post(
@@ -497,11 +502,8 @@ const ToyotAIApp: React.FC = () => {
       </div>
       {quizVisible && (
         <div id="quiz-container" className="quiz-container">
-          <h3>Find Your Ideal Car</h3>
-          <p>Choose a method to find your ideal car:</p>
-          <button onClick={toggleQuizForm}>Take the Quiz</button>
-          <br></br>
-          <br></br>
+          <h2 color="white">Find Your Ideal Car</h2>
+          <h3>Talk to our virtual agent</h3>
           <div>
             <input
               type="text"
@@ -513,6 +515,7 @@ const ToyotAIApp: React.FC = () => {
           </div>
           {response && <p>{response}</p>} {/* Display response */}
           <div />
+          {/* SEARCH FILTERING */}
           <form id="quiz-form">
             <label htmlFor="model">Model</label>
             <select
@@ -524,6 +527,21 @@ const ToyotAIApp: React.FC = () => {
               <option value="Camry">Camry</option>
               <option value="Corolla">Corolla</option>
               <option value="Sienna">Sienna</option>
+              <option value="Crown Signia">Crown Signia</option>
+              <option value="Corolla">Corolla Hatchback</option>
+              <option value="Prius Plug-in Hybrid">Prius Plug-in Hybrid</option>
+              <option value="Prius Plug-in Hybrid">Prius Plug-in Hybrid</option>
+              <option value="RAV4 Plug-in Hybrid">RAV4 Plug-in Hybrid</option>
+              <option value="Grand Highlander Hybrid">
+                Grand Highlander Hybrid
+              </option>
+              <option value="GR86">GR86</option>
+              <option value="Supra">Supra</option>
+              <option value="bZ4X">bZ4X</option>
+              <option value="Land Cruiser">Land Cruiser</option>
+              <option value="Sequoia">Sequoia</option>
+              <option value="Avalon">Avalon</option>
+              <option value="4Runner">4Runner</option>
             </select>
 
             <label htmlFor="price-range">Price Range</label>
@@ -538,6 +556,19 @@ const ToyotAIApp: React.FC = () => {
               <option value="$30,000 - $40,000">$30,000 - $40,000</option>
             </select>
 
+            <label htmlFor="DriveTrain">Drive Train</label>
+            <select
+              id="DriveTrain"
+              value={DriveTrain}
+              onChange={(e) => setDriveTrain(e.target.value)}
+            >
+              <option value="">Select Drive Train</option>
+              <option value="FWD">FWD</option>
+              <option value="AWD">AWD</option>
+              <option value="4WD">4WD</option>
+              <option value="RWD">RWD</option>
+            </select>
+
             <label htmlFor="type">Type of Car</label>
             <select
               id="type"
@@ -548,6 +579,9 @@ const ToyotAIApp: React.FC = () => {
               <option value="SUV">SUV</option>
               <option value="Sedan">Sedan</option>
               <option value="Truck">Truck</option>
+              <option value="Sports Car">Sports Car</option>
+              <option value="Minivan">Minivan</option>
+              <option value="Hatchback">Hatchback</option>
             </select>
 
             <button type="button" onClick={submitQuiz}>
@@ -562,7 +596,7 @@ const ToyotAIApp: React.FC = () => {
                   {filteredCars.map((car, index) => (
                     <div key={index} className="car-card">
                       <img
-                        src={car.image || "default-car-image.jpg"}
+                        src={car.HREF || "default-car-image.jpg"}
                         alt={car.model}
                         className="car-image"
                       />
@@ -570,7 +604,7 @@ const ToyotAIApp: React.FC = () => {
                         <h3>{car.model}</h3>
                         <p>Type: {car.type}</p>
                         <p>Price: ${car.price}</p>
-                        <p>DriveTrain: {car["Drivetrain (AWD, 4WD, FWD)"]}</p>
+                        <p>DriveTrain: {car.DriveTrain}</p>
                         <p>MPG: MPG{car.MPG}</p>
                         <p>36: 36{car["36 Months"]}</p>
                         <p>24: 24{car["24 Months"]}</p>
@@ -640,135 +674,3 @@ const ToyotAIApp: React.FC = () => {
 };
 
 export default ToyotAIApp;
-
-// import { useState, useEffect } from "react";
-// import axios from "axios";
-// import './st'
-// function App() {
-//   const [array, setArray] = useState([]);
-
-//   const fetchAPI = async () => {
-//     const response = await axios.get("http://localhost:6969/api/users");
-//     console.log(response.data.users); // This will print the users to the console
-//     setArray(response.data.users);
-//   };
-
-//   useEffect(() => {
-//     fetchAPI();
-//   }, []);
-
-//   //   <div className="app-container">
-//   //   <div className="user-list">
-//   //     {array.map((user, index) => (
-//   //       <div className="user-item" key={index}>
-//   //         <span>{user}</span>
-//   //       </div>
-//   //     ))}
-//   //   </div>
-//   // </div>
-//   return (
-//     <>
-//       <meta charSet="UTF-8" />
-//       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-//       <title>ToyotAI - Homepage</title>
-//       <link rel="stylesheet" href="../styles/style.css" />
-//       <header>
-//         <h1>ToyotAI - Find Your Perfect Car</h1>
-//       </header>
-//       <div className="logo">
-//         <img
-//           src="https://global.toyota/pages/global_toyota/mobility/toyota-brand/emblem_001.jpg"
-//           alt="ToyotAI Logo"
-//         />
-//       </div>
-//       <div className="buttons">
-//         <a href="#" id="find-car-btn">
-//           Find Your Ideal Car
-//         </a>
-//         <a href="#" id="see-all-cars-btn" className="secondary">
-//           See All Cars
-//         </a>
-//       </div>
-//       {/* Find Your Ideal Car Section */}
-//       <div id="quiz-container" className="quiz-container hidden">
-//         <h3>Find Your Ideal Car</h3>
-//         <p>Choose a method to find your ideal car:</p>
-//         <button onClick={() => toggleQuizForm()}>Take the Quiz</button>
-//         <button onclick="toggleSearchPrompt()">Enter a Custom Prompt</button>
-//         {/* Quiz Form */}
-//         <div id="quiz-form" className="hidden">
-//           <label htmlFor="model">Model</label>
-//           <input type="text" id="model" placeholder="e.g., Camry, Corolla" />
-//           <label htmlFor="price-range">Price Range</label>
-//           <input
-//             type="text"
-//             id="price-range"
-//             placeholder="e.g., $20,000 - $30,000"
-//           />
-//           <label htmlFor="type">Type of Car</label>
-//           <input type="text" id="type" placeholder="e.g., SUV, Sedan" />
-//           <label htmlFor="personality">Personality</label>
-//           <input
-//             type="text"
-//             id="personality"
-//             placeholder="e.g., sporty, family-friendly"
-//           />
-//           <label htmlFor="mpg">Miles Per Gallon (MPG)</label>
-//           <input type="number" id="mpg" placeholder="e.g., 25" />
-//           <label htmlFor="seats">Seats</label>
-//           <input type="number" id="seats" placeholder="e.g., 5" />
-//           <label htmlFor="fuel-type">Fuel Type</label>
-//           <input
-//             type="text"
-//             id="fuel-type"
-//             placeholder="e.g., Gasoline, Electric"
-//           />
-//           <label htmlFor="horsepower">Horsepower</label>
-//           <input type="number" id="horsepower" placeholder="e.g., 300" />
-//           <label htmlFor="interior">Interior Features</label>
-//           <input
-//             type="text"
-//             id="interior"
-//             placeholder="e.g., leather, touchscreen"
-//           />
-//           <label htmlFor="drivetrain">Drivetrain</label>
-//           <input type="text" id="drivetrain" placeholder="e.g., AWD, FWD" />
-//           <button onclick="submitQuiz()">Submit Quiz</button>
-//         </div>
-//         {/* Custom Prompt */}
-//         <div id="custom-prompt" className="hidden">
-//           <label htmlFor="ai-prompt">Enter Your Custom Preferences</label>
-//           <input
-//             type="text"
-//             id="ai-prompt"
-//             placeholder="e.g., Reliable SUV under $30,000"
-//           />
-//           <button onclick="submitPrompt()">Search</button>
-//         </div>
-//       </div>
-//       {/* See All Cars Section */}
-//       <div id="car-list-container" className="container hidden">
-//         <h3>See All Cars</h3>
-//         <div className="ai-search-bar">
-//           <input
-//             type="text"
-//             id="ai-search-input"
-//             placeholder="Type your search preferences, e.g., SUV under $30,000"
-//             oninput="handleAISearch()"
-//           />
-//           <button onclick="handleAISearch()">Search</button>
-//         </div>
-//         <div className="filter-options">
-//           <select id="sort-options" onchange="sortCarsByPrice()">
-//             <option value="featured">Featured</option>
-//             <option value="lowest">Lowest Price</option>
-//             <option value="highest">Highest Price</option>
-//           </select>
-//         </div>
-//         <div id="car-list" className="car-list grid-layout" />
-//       </div>
-//     </>
-//   );
-// }
-
-// export default App;
