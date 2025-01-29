@@ -20,18 +20,18 @@ This project was an incredible opportunity to deepen our technical and teamwork 
 
 📊 **Backend with Pandas** – We used the Pandas library to process and analyze car data efficiently, making our recommendation system smarter.
 
-🎨 **Enhanced UI/UX in React** – We refined our frontend skills, creating an engaging and responsive experience with **React** and **Tailwind CSS**.
+🎨 **Enhanced UI/UX in React** – We refined our frontend skills, creating an engaging and responsive experience with **React** and **CSS**.
 
 🤝 **Collaboration & Teamwork** – Working under time constraints pushed us to efficiently divide tasks, communicate effectively, and integrate our work seamlessly.
 
-🧠 **Implementing AI Features** – Our virtual salesman leverages **OpenAI's GPT API** for intelligent conversations, and our recommendation system uses **cosine similarity** for personalized vehicle matching.
+🧠 **Implementing AI Features** – Our virtual salesman leverages **OpenAI's GPT API** for intelligent conversations, and for our recommendation system/vehicle matching quiz.
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React, Tailwind CSS
+- **Frontend:** React, CSS
 - **Backend:** Python (Flask), Pandas
-- **AI Features:** OpenAI API, Cosine Similarity for Recommendations
-- **Database:** JSON-based storage (for rapid prototyping)
+- **AI Features:** OpenAI API,
+- **Database:** JSON-based, and csv storage (for rapid prototyping)
 
 ## 🚀 How to Run It
 
