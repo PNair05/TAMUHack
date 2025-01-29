@@ -38,7 +38,6 @@ export default function CarPersonalityQuiz({
       return acc;
     }, {});
     console.log(responseJSON);
-    setActivePage("test");
   };
 
   return (
